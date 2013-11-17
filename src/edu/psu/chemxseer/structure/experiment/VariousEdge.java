@@ -2,7 +2,6 @@ package edu.psu.chemxseer.structure.experiment;
 
 import java.io.IOException;
 
-import org.apache.commons.math.MathException;
 import org.apache.lucene.queryParser.ParseException;
 
 import de.parmol.parsers.GraphParser;
@@ -30,11 +29,8 @@ public class VariousEdge {
 	 BasicExpRunner runner = new BasicExpRunner(dbFileName, dbParser,
 	 baseName);
 	
-	 try {
+
 	 runner.genQueries(false);
-	 } catch (MathException e) {
-	 e.printStackTrace();
-	 }
 	 String queryFile = baseName + "Queries/QueryInf";
 	  IGraphs[] queries = InFrequentQueryGenerater.loadInfrequentQueries(queryFile);
 	 

@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
-import org.apache.commons.math.MathException;
-
 import de.parmol.graph.Graph;
 import de.parmol.parsers.GraphParser;
 import edu.psu.chemxseer.structure.factory.InFrequentQueryGenerater;
@@ -68,7 +66,7 @@ public class BasicExpRunner extends BasicExpBuilder {
 	// }
 	//
 	public void genQueries(boolean genTrainQueries) throws IOException,
-			ParseException, MathException {
+			ParseException {
 		GraphDatabase_OnDisk gDB = new GraphDatabase_OnDisk(this.dbFileName,
 				this.dbParser);
 		File QueryFolder = new File(baseName + "Queries");
